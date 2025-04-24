@@ -2319,6 +2319,7 @@ export namespace Prisma {
     name: string | null
     address: string | null
     imageUrl: string | null
+    description: string | null
     cratedAt: Date | null
     updatedAt: Date | null
   }
@@ -2328,6 +2329,7 @@ export namespace Prisma {
     name: string | null
     address: string | null
     imageUrl: string | null
+    description: string | null
     cratedAt: Date | null
     updatedAt: Date | null
   }
@@ -2338,6 +2340,7 @@ export namespace Prisma {
     address: number
     phones: number
     imageUrl: number
+    description: number
     cratedAt: number
     updatedAt: number
     _all: number
@@ -2349,6 +2352,7 @@ export namespace Prisma {
     name?: true
     address?: true
     imageUrl?: true
+    description?: true
     cratedAt?: true
     updatedAt?: true
   }
@@ -2358,6 +2362,7 @@ export namespace Prisma {
     name?: true
     address?: true
     imageUrl?: true
+    description?: true
     cratedAt?: true
     updatedAt?: true
   }
@@ -2368,6 +2373,7 @@ export namespace Prisma {
     address?: true
     phones?: true
     imageUrl?: true
+    description?: true
     cratedAt?: true
     updatedAt?: true
     _all?: true
@@ -2451,6 +2457,7 @@ export namespace Prisma {
     address: string
     phones: string[]
     imageUrl: string
+    description: string
     cratedAt: Date
     updatedAt: Date
     _count: BarbershopCountAggregateOutputType | null
@@ -2478,6 +2485,7 @@ export namespace Prisma {
     address?: boolean
     phones?: boolean
     imageUrl?: boolean
+    description?: boolean
     cratedAt?: boolean
     updatedAt?: boolean
     servicers?: boolean | Barbershop$servicersArgs<ExtArgs>
@@ -2490,6 +2498,7 @@ export namespace Prisma {
     address?: boolean
     phones?: boolean
     imageUrl?: boolean
+    description?: boolean
     cratedAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["barbershop"]>
@@ -2500,6 +2509,7 @@ export namespace Prisma {
     address?: boolean
     phones?: boolean
     imageUrl?: boolean
+    description?: boolean
     cratedAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["barbershop"]>
@@ -2510,11 +2520,12 @@ export namespace Prisma {
     address?: boolean
     phones?: boolean
     imageUrl?: boolean
+    description?: boolean
     cratedAt?: boolean
     updatedAt?: boolean
   }
 
-  export type BarbershopOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "address" | "phones" | "imageUrl" | "cratedAt" | "updatedAt", ExtArgs["result"]["barbershop"]>
+  export type BarbershopOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "address" | "phones" | "imageUrl" | "description" | "cratedAt" | "updatedAt", ExtArgs["result"]["barbershop"]>
   export type BarbershopInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     servicers?: boolean | Barbershop$servicersArgs<ExtArgs>
     _count?: boolean | BarbershopCountOutputTypeDefaultArgs<ExtArgs>
@@ -2533,6 +2544,7 @@ export namespace Prisma {
       address: string
       phones: string[]
       imageUrl: string
+      description: string
       cratedAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["barbershop"]>
@@ -2964,6 +2976,7 @@ export namespace Prisma {
     readonly address: FieldRef<"Barbershop", 'String'>
     readonly phones: FieldRef<"Barbershop", 'String[]'>
     readonly imageUrl: FieldRef<"Barbershop", 'String'>
+    readonly description: FieldRef<"Barbershop", 'String'>
     readonly cratedAt: FieldRef<"Barbershop", 'DateTime'>
     readonly updatedAt: FieldRef<"Barbershop", 'DateTime'>
   }
@@ -5641,6 +5654,7 @@ export namespace Prisma {
     address: 'address',
     phones: 'phones',
     imageUrl: 'imageUrl',
+    description: 'description',
     cratedAt: 'cratedAt',
     updatedAt: 'updatedAt'
   };
@@ -5816,6 +5830,7 @@ export namespace Prisma {
     address?: StringFilter<"Barbershop"> | string
     phones?: StringNullableListFilter<"Barbershop">
     imageUrl?: StringFilter<"Barbershop"> | string
+    description?: StringFilter<"Barbershop"> | string
     cratedAt?: DateTimeFilter<"Barbershop"> | Date | string
     updatedAt?: DateTimeFilter<"Barbershop"> | Date | string
     servicers?: BarbershopServiceListRelationFilter
@@ -5827,6 +5842,7 @@ export namespace Prisma {
     address?: SortOrder
     phones?: SortOrder
     imageUrl?: SortOrder
+    description?: SortOrder
     cratedAt?: SortOrder
     updatedAt?: SortOrder
     servicers?: BarbershopServiceOrderByRelationAggregateInput
@@ -5841,6 +5857,7 @@ export namespace Prisma {
     address?: StringFilter<"Barbershop"> | string
     phones?: StringNullableListFilter<"Barbershop">
     imageUrl?: StringFilter<"Barbershop"> | string
+    description?: StringFilter<"Barbershop"> | string
     cratedAt?: DateTimeFilter<"Barbershop"> | Date | string
     updatedAt?: DateTimeFilter<"Barbershop"> | Date | string
     servicers?: BarbershopServiceListRelationFilter
@@ -5852,6 +5869,7 @@ export namespace Prisma {
     address?: SortOrder
     phones?: SortOrder
     imageUrl?: SortOrder
+    description?: SortOrder
     cratedAt?: SortOrder
     updatedAt?: SortOrder
     _count?: BarbershopCountOrderByAggregateInput
@@ -5868,6 +5886,7 @@ export namespace Prisma {
     address?: StringWithAggregatesFilter<"Barbershop"> | string
     phones?: StringNullableListFilter<"Barbershop">
     imageUrl?: StringWithAggregatesFilter<"Barbershop"> | string
+    description?: StringWithAggregatesFilter<"Barbershop"> | string
     cratedAt?: DateTimeWithAggregatesFilter<"Barbershop"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Barbershop"> | Date | string
   }
@@ -6066,6 +6085,7 @@ export namespace Prisma {
     address: string
     phones?: BarbershopCreatephonesInput | string[]
     imageUrl: string
+    description: string
     cratedAt?: Date | string
     updatedAt?: Date | string
     servicers?: BarbershopServiceCreateNestedManyWithoutBarbershopInput
@@ -6077,6 +6097,7 @@ export namespace Prisma {
     address: string
     phones?: BarbershopCreatephonesInput | string[]
     imageUrl: string
+    description: string
     cratedAt?: Date | string
     updatedAt?: Date | string
     servicers?: BarbershopServiceUncheckedCreateNestedManyWithoutBarbershopInput
@@ -6088,6 +6109,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     servicers?: BarbershopServiceUpdateManyWithoutBarbershopNestedInput
@@ -6099,6 +6121,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     servicers?: BarbershopServiceUncheckedUpdateManyWithoutBarbershopNestedInput
@@ -6110,6 +6133,7 @@ export namespace Prisma {
     address: string
     phones?: BarbershopCreatephonesInput | string[]
     imageUrl: string
+    description: string
     cratedAt?: Date | string
     updatedAt?: Date | string
   }
@@ -6120,6 +6144,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6130,6 +6155,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6377,6 +6403,7 @@ export namespace Prisma {
     address?: SortOrder
     phones?: SortOrder
     imageUrl?: SortOrder
+    description?: SortOrder
     cratedAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -6386,6 +6413,7 @@ export namespace Prisma {
     name?: SortOrder
     address?: SortOrder
     imageUrl?: SortOrder
+    description?: SortOrder
     cratedAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -6395,6 +6423,7 @@ export namespace Prisma {
     name?: SortOrder
     address?: SortOrder
     imageUrl?: SortOrder
+    description?: SortOrder
     cratedAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -6906,6 +6935,7 @@ export namespace Prisma {
     address: string
     phones?: BarbershopCreatephonesInput | string[]
     imageUrl: string
+    description: string
     cratedAt?: Date | string
     updatedAt?: Date | string
   }
@@ -6916,6 +6946,7 @@ export namespace Prisma {
     address: string
     phones?: BarbershopCreatephonesInput | string[]
     imageUrl: string
+    description: string
     cratedAt?: Date | string
     updatedAt?: Date | string
   }
@@ -6968,6 +6999,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6978,6 +7010,7 @@ export namespace Prisma {
     address?: StringFieldUpdateOperationsInput | string
     phones?: BarbershopUpdatephonesInput | string[]
     imageUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }

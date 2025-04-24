@@ -24,14 +24,15 @@ model User {
 }
 
 model Barbershop {
-  id        String              @id @default(uuid())
-  name      String
-  address   String
-  phones    String[]
-  imageUrl  String
-  cratedAt  DateTime            @default(now())
-  updatedAt DateTime            @updatedAt
-  servicers BarbershopService[]
+  id          String              @id @default(uuid())
+  name        String
+  address     String
+  phones      String[]
+  imageUrl    String
+  description String
+  cratedAt    DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  servicers   BarbershopService[]
 }
 
 model BarbershopService {

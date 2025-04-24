@@ -131,6 +131,7 @@ exports.Prisma.BarbershopScalarFieldEnum = {
   address: 'address',
   phones: 'phones',
   imageUrl: 'imageUrl',
+  description: 'description',
   cratedAt: 'cratedAt',
   updatedAt: 'updatedAt'
 };
